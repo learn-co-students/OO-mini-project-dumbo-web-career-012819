@@ -3,6 +3,8 @@ require_relative '../config/environment.rb'
 user1 = User.new('Myung')
 user2 = User.new('Sharon')
 user3 = User.new('Greg')
+user4 = User.new('Amos')
+user5 = User.new('Mike')
 
 recipe1 = Recipe.new('strawberry cake')
 recipe2 = Recipe.new('cheese cake')
@@ -24,13 +26,9 @@ recipeingredient3 = RecipeIngredient.new('b-c ingredients', ingredient3, recipe3
 
 allergy1 = Allergen.new('strawberry allergy', ingredient1, user1)
 allergy2 = Allergen.new('lactose allergy', ingredient2, user2)
-allergy3 = Allergen.new('potassium allergy', ingredient3, user3)
+allergy3 = Allergen.new('potassium allergy', ingredient3, user4)
+allergy4 = Allergen.new('potassium allergy', ingredient3, user5)
+allergy5 = Allergen.new('potassium allergy', ingredient3, user3)
 
 binding.pry
-
-puts user1
-puts recipe1
-puts recipecard1
-puts ingredient2
-puts recipeingredient2
-puts allergy2
+0
