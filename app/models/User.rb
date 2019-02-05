@@ -41,4 +41,24 @@ class User
     Allergen.new(ingredient: ingredient, user: self)
   end
 
+  def safe_recipes
+    safe = []
+
+    Recipe.all.each do |recipe|
+      unsafe = []
+      
+      allergens.each do |allergen|
+        if recipe.ingredients.include?(allergen.ingredient)
+          unsafe << recipe
+        end
+      end
+
+      if !unsafe.include?(recipe)
+        safe << recipe
+      end
+    end
+
+    return safe
+  end
+
 end

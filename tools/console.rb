@@ -7,11 +7,11 @@ user1 = User.new("Siri")
 user2 = User.new("Alexa")
 
 #---------- Recipe ----------#
-recipe1 = Recipe.new("Cake")
-recipe2 = Recipe.new("Cookie")
-recipe3 = Recipe.new("Pasta")
-recipe4 = Recipe.new("Steak")
-recipe5 = Recipe.new("Poke")
+recipe1 = Recipe.new("Cheesecake")
+recipe2 = Recipe.new("Poke Bowl")
+recipe3 = Recipe.new("NY Bagel")
+recipe4 = Recipe.new("Omelette")
+recipe5 = Recipe.new("Pizza")
 
 
 
@@ -24,13 +24,13 @@ recipecard4 = RecipeCard.new(date: 20181122, recipe: recipe4, user: user1, ratin
 #---------- Ingredient --------#
 ingredient1 = Ingredient.new("Milk")
 ingredient2 = Ingredient.new("Salmon")
-ingredient3 = Ingredient.new("Rice")
-ingredient4 = Ingredient.new("Beef")
+ingredient3 = Ingredient.new("Cream Cheese")
+ingredient4 = Ingredient.new("Eggs")
 
 #---------- RecipeIngredient --------#
 recipeingredient1 = RecipeIngredient.new(recipe: recipe1, ingredient: ingredient1)
 recipeingredient2 = RecipeIngredient.new(recipe: recipe2, ingredient: ingredient2)
-recipeingredient3 = RecipeIngredient.new(recipe: recipe1, ingredient: ingredient3)
+recipeingredient3 = RecipeIngredient.new(recipe: recipe3, ingredient: ingredient3)
 recipeingredient4 = RecipeIngredient.new(recipe: recipe4, ingredient: ingredient4)
 
 #---------- Allergen --------#
@@ -44,5 +44,5 @@ allergen3 = Allergen.new(user:user2, ingredient:ingredient1)
 # user1.declare_allergen(ingredient4)
 # puts Allergen.all
 recipe1.add_ingredients([ingredient3, ingredient4])
-#Recipe:0x007f8db9832ea0>
 binding.pry
+# 0

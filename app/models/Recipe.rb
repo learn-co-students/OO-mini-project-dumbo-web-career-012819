@@ -11,7 +11,7 @@ class Recipe
     @@all
   end
 
-  def Recipe.most_popular
+  def self.most_popular
     recipe_hash = Hash.new(0)
     recipe_arr = RecipeCard.all.map { |rc| rc.recipe}
 
@@ -19,7 +19,7 @@ class Recipe
       recipe_hash[v] += 1
     end
 
-    (recipe_hash.max_by { |k, v| v} )[0]
+    (recipe_hash.max_by { |k, v| v } )[0]
   end
 
   def recipe_cards
